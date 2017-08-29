@@ -15,11 +15,24 @@ npm start
 npm run build
 ```
 
-## problem XMLHttpRequest cannot load server
+## Problem XMLHttpRequest cannot load server
 
 ``` bash
 
 # install plugin chrome "Cors"
+
+```
+
+### Checklist 
+
+``` bash
+
+V - componets
+V - routing
+v - menu component
+v - footer component
+v - http get
+
 
 ```
 
