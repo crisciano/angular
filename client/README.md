@@ -31,7 +31,11 @@ V - componets
 V - routing
 v - menu component
 v - footer component
+v - cadastro component
+v - index component
 v - http get
+x - form cadastro 
+x - form edição 
 
 
 ```

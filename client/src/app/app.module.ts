@@ -11,7 +11,8 @@ import { AppComponent } from './app.component';
 import { PainelComponent } from './painel/painel.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ListagemComponent } from './listagem/listagem.component';
-import { routing } from './app.routes'
+import { routing } from './app.routes';
+import { IndexComponent } from './index/index.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { routing } from './app.routes'
     FooterComponent,
     PainelComponent,
     CadastroComponent,
-    ListagemComponent
+    ListagemComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,
