@@ -12,7 +12,8 @@ import { PainelComponent } from './painel/painel.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ListagemComponent } from './listagem/listagem.component';
 import { routing } from './app.routes';
-import { IndexComponent } from './index/index.component'
+import { IndexComponent } from './index/index.component';
+import { ErrorComponent } from './error/error.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { IndexComponent } from './index/index.component'
     PainelComponent,
     CadastroComponent,
     ListagemComponent,
-    IndexComponent
+    IndexComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
