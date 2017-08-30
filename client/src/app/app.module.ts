@@ -14,6 +14,7 @@ import { ListagemComponent } from './listagem/listagem.component';
 import { routing } from './app.routes';
 import { IndexComponent } from './index/index.component';
 import { ErrorComponent } from './error/error.component'
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ErrorComponent } from './error/error.component'
     MaterializeModule,
     FotoModule,
     HttpModule,
-    routing
+    routing,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
