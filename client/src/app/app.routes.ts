@@ -7,7 +7,7 @@ import { ErrorComponent } from './error/error.component'
 const appRoutes: Routes = [
 	{path: '', component: IndexComponent },
 	{path: 'listagem', component: ListagemComponent },
-	{path: 'cadastro ', component: CadastroComponent },
+	{path: 'cadastro', component: CadastroComponent },
 	{path: 'cadastro/:id', component: CadastroComponent },
 	{path: '**', component: ErrorComponent }
 ]

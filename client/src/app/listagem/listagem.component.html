@@ -1,5 +1,18 @@
-<div class="container"> 
-  <app-painel *ngFor="let foto of fotos" titulo="{{foto.titulo}}"> 
-    <foto url="{{foto.url}}" titulo="{{foto.titulo}}"></foto>
-  </app-painel>
-</div>
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<a [routerLink]="['/cadastro']" class="btn btn-primary"> nova foto</a>
+				<input class="form-control" placeholder="filtrar pelo título da foto">
+			</div>
+		</div>
+	</div>
+
+	<div class="container"> 
+		<div class="row">
+			<app-painel *ngFor="let foto of fotos" titulo="{{foto.titulo | uppercase }}"> 
+				<foto url="{{foto.url}}" titulo="{{foto.titulo}}"></foto>
+			</app-painel>
+		</div>
+	</div>
+</section>
