@@ -5,7 +5,7 @@
 				<div class="nav-wrapper">
 					<a href="#" class="brand-logo">Logo</a>
 					<ul id="nav-mobile" class="right hide-on-med-and-down">
-						<li><a class="grey-text text-lighten-3"[routerLink]="['/']">Index</a></li>
+						<li><a class="grey-text text-lighten-3" [routerLink]="['/']">Index</a></li>
 						<li><a class="grey-text text-lighten-3" [routerLink]="['/cadastro']">Cadastra foto</a></li>
 						<li><a class="grey-text text-lighten-3" [routerLink]="['/listagem']">Listar foto</a></li>
 						<li><a class="grey-text text-lighten-3" [routerLink]="['/error']">Error</a></li>
@@ -21,9 +21,9 @@
 	    <i class="material-icons">menu</i>
 	  </a>
 	  <ul>
-	    <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-	    <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+	    <li><a class="btn-floating red" [routerLink]="['/listagem']"><i class="material-icons">crop_original</i></a></li>
+	    <li><a class="btn-floating yellow darken-1" [routerLink]="['/cadastro']"><i class="material-icons">add</i></a></li>
 	    <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-	    <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+	    <li><a class="btn-floating blue" [routerLink]="['/']"><i class="material-icons">home</i></a></li>
 	  </ul>
 	</div>
