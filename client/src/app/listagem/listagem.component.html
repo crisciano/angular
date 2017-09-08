@@ -10,7 +10,7 @@
 
 	<div class="container"> 
 		<div class="row">
-			<app-painel *ngFor="let foto of fotos | filtroPorTitulo: textoProcurado.value" titulo="{{foto.titulo | uppercase }}"> 
+			<app-painel *ngFor="let foto of fotos | filtroPorTitulo: textoProcurado.value" titulo="{{foto.titulo | uppercase }}" id="{{foto._id}}" descricao="{{foto.descricao}}" valor="{{foto.valor}}" > 
 				<foto url="{{foto.url}}" titulo="{{foto.titulo}}"></foto>
 
 				<div btn>
