@@ -11,18 +11,27 @@
     		<div class="input-field col s12">
 				<input type="text" name="titulo" [(ngModel)]="foto.titulo" class="validate">
 				<label >Titulo</label>
+                <!-- <span *ngIf="meuForm.controls.titulo.invalid" class="alert-danger">
+                    Obrigatório
+                </span> -->
 	        </div>
     	</div>
     	<div class="row">
     		<div class="input-field col s12">
 				<input type="text" name="url" [(ngModel)]="foto.url" class="validate">
 				<label >Url</label>
+                <!-- <span *ngIf="meuForm.controls.url.invalid" class="alert-danger">
+                    Obrigatório
+                </span> -->
 	        </div>
     	</div>
     	<div class="row">
     		<div class="input-field col s12">
 				<input type="text" name="descricao" [(ngModel)]="foto.descricao" class="validate">
 				<label >Descricao</label>
+                <!-- <span *ngIf="meuForm.controls.description.invalid" class="alert-danger">
+                    Obrigatório
+                </span> -->
 	        </div>
     	</div>
     	<div class="row">

@@ -6,11 +6,13 @@
       <span class="card-title">{{titulo}}</span>
     </div>
     <div class="card-content">
-      <p>I am a very simple card. I am good at containing small bits of information.
-      I am convenient because I require little markup to use effectively.</p>
+      <p>{{descricao}}</p>
     </div>
     <div class="card-action">
+      <ng-content select="[btn]"></ng-content>
+      <!-- <a class="btn-floating btn-large waves-effect waves-light green"><i class="material-icons">edit</i></a>
       <a href="#">Editar</a>
+      <a class="btn-floating btn-large waves-effect waves-light red" (click)="delete($event)"><i class="material-icons">delete</i></a> -->
     </div>
   </div>
 </div>

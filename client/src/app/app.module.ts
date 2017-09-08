@@ -6,6 +6,7 @@ import { MenuComponent } from './menu/menu.component'
 import { FooterComponent } from './footer/footer.component'
 import { HttpModule } from '@angular/http'
 import 'rxjs/add/operator/map'
+import { FotoService } from './foto/foto.service'
 
 import { AppComponent } from './app.component';
 import { PainelComponent } from './painel/painel.component';
@@ -14,7 +15,7 @@ import { ListagemComponent } from './listagem/listagem.component';
 import { routing } from './app.routes';
 import { IndexComponent } from './index/index.component';
 import { ErrorComponent } from './error/error.component'
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -33,9 +34,10 @@ import { FormsModule } from '@angular/forms'
     FotoModule,
     HttpModule,
     routing,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ FotoService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

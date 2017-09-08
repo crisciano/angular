@@ -8,6 +8,4 @@ import { FiltroPorTitulo } from './foto.pipes'
 
 })
 
-export class FotoModule {
-
-}
+export class FotoModule { }
