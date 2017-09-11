@@ -17,10 +17,10 @@ export class PainelComponent implements OnInit {
   	constructor() { }
 
     	ngOnInit(){
-        this.id;
-        this.valor;
-        this.descricao;
-        this.url
+        // this.id;
+        // this.valor;
+        // this.descricao;
+        // this.url
     		this.titulo = 
     			this.titulo.length > 7 ?
     			this.titulo.substr(0,7) + '...' :

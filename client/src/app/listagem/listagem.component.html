@@ -14,8 +14,9 @@
 				<foto url="{{foto.url}}" titulo="{{foto.titulo}}"></foto>
 
 				<div btn>
-					<a class="btn-floating btn-large waves-effect waves-light green"><i class="material-icons">edit</i></a>
-				    <a class="btn-floating btn-large waves-effect waves-light red" (click)="delete(foto._id)"><i class="material-icons">delete</i></a>
+					<a class="btn-floating btn-large waves-effect waves-light green"><i class="material-icons" [routerLink]="['/cadastro', foto._id]">edit</i></a>
+					<!-- <a class="btn-floating btn-large waves-effect waves-light green"><i class="material-icons" (click)="update(foto)">edit</i></a> -->
+				    <a class="btn-floating btn-large waves-effect waves-light red" (click)="delete(foto)"><i class="material-icons">delete</i></a>
 				</div>
 			</app-painel>
 		</div>

@@ -11,25 +11,32 @@ import { FotoComponent } from '../foto/foto.component'
 export class ListagemComponent {
 
 	fotos: FotoComponent[] = [];
+  service: FotoService;
 
   // constructor (http: Http) {
   constructor (service : FotoService) {
-    service
+    this.service = service;
+    this.service
       .list()
       .subscribe( fotos => {
         this.fotos = fotos;
         console.log(this.fotos);
       }, err => console.log(err) )
-  	// http
-   //  .get('http://localhost:3000/v1/fotos')
-   //  .map(res => res.json())
-  	// .subscribe(fotos => { this.fotos = fotos; console.log( fotos ) }, 
-   //              err => console.log(err))
+  }
+
+  update(foto){
+    console.log(foto)
   }
 
   delete(foto){
     console.log(foto);
-
+    this.service
+      .delete(foto)
+      .subscribe(() => {
+              let indice = this.fotos.indexOf(foto);
+              this.fotos.splice(indice, 1);
+              console.log('foto excluida com sucesso!!')}, 
+                  err => console.log(err))
   }
 
 }
