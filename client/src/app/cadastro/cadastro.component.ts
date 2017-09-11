@@ -14,6 +14,7 @@ export class CadastroComponent{
 	foto: FotoComponent = new FotoComponent();
 	route: ActivatedRoute;
 	router: Router;
+	mensagem = '';
 	// meuForm: FormGroup;
 
 	constructor(private service: FotoService, route: ActivatedRoute, router: Router ){
@@ -49,10 +50,11 @@ export class CadastroComponent{
 
 		this.service
 			.add(this.foto)
-			.subscribe(() => {
+			.subscribe(res => {
 				console.log('Foto cadastrada com sucesso!! ')
+				this.mensagem = res.mensagem;
 				this.foto = new FotoComponent();
-				this.router.navigate(['/listagem']);
+				if (!res.inclusao) this.router.navigate(['/listagem']);
 			}, err => console.log(err))
         
 	}

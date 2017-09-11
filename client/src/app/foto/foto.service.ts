@@ -15,13 +15,15 @@ export class FotoService {
 		this.headers.append('Content-Type','application/json');
 	}
 
-	add(foto: FotoComponent): Observable<Response>{
+	add(foto: FotoComponent): Observable<Msg>{
 		if (foto._id) { 
 			return this.http
 				.put(this.url + '/' + foto._id, JSON.stringify(foto), { headers: this.headers })
+				.map(() => new Msg( 'Foto editada com sucesso!!', false ))
 		} else {
 			return this.http
 				.post(this.url, JSON.stringify(foto), { headers: this.headers })
+				.map(() => new Msg('Foto incluida com sucesso!!', true  ))
 		}
 	}
 
@@ -29,10 +31,6 @@ export class FotoService {
 		return this.http
 		    .get(this.url, { headers: this.headers })
 		    .map(res => res.json())
-	}
-
-	update(foto: FotoComponent){
-
 	}
 
 	buscaId(id: string): Observable<FotoComponent>{
@@ -44,5 +42,19 @@ export class FotoService {
 	delete(foto: FotoComponent): Observable<Response>{
 		return this.http
 			.delete(this.url + '/' + foto._id, { headers: this.headers } )
+	}
+}
+
+export class Msg{
+
+	constructor(private _mensagem: string, private _inclusao: boolean){
+		this._mensagem = _mensagem;
+		this._inclusao = _inclusao;
+	}
+	get mensagem(): string {
+		return this._mensagem;
+	}
+	get inclusao(): boolean{
+		return this._inclusao;
 	}
 }
