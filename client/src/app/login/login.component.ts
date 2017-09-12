@@ -26,7 +26,9 @@ export class LoginComponent implements OnInit {
 		let uPass = this.user['password'];
 		let key = btoa(btoa(uEmail) +'??'+ btoa(uPass));
 
-		Cookie.setCookie('sessionID', key);
+		document.cookie = 'sessionID='+key;
+
+		// Cookie.setCookie('sessionID', key);
 
 		let pass = atob(atob(key).split('??')[1]);
 		console.log(this.user);
