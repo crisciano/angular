@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ElementRef } from '@angular/core';
+import $ from 'jquery'
 
 @Component({
 	moduleId: module.id,
@@ -14,18 +15,21 @@ export class PainelComponent implements OnInit {
   @Input() valor: number 
   @Input() id: string
 
-  	constructor() { }
+  element: ElementRef;
+
+  	constructor(element: ElementRef) { 
+      this.element = element;
+    }
 
     	ngOnInit(){
-        // this.id;
-        // this.valor;
-        // this.descricao;
-        // this.url
     		this.titulo = 
     			this.titulo.length > 7 ?
     			this.titulo.substr(0,7) + '...' :
     			this.titulo;
-    		
     	}
+
+      fadeOut(cb){
+        $(this.element.nativeElement).fadeOut(cb);
+      }
 
 }

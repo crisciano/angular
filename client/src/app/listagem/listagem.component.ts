@@ -2,6 +2,7 @@ import { Component } from '@angular/core'
 // import { Http } from '@angular/http'
 import { FotoService } from '../foto/foto.service'
 import { FotoComponent } from '../foto/foto.component'
+import { PainelComponent } from '../painel/painel.component'
 
 @Component({
   selector: 'app-listagem',
@@ -24,19 +25,21 @@ export class ListagemComponent {
       }, err => console.log(err) )
   }
 
-  update(foto){
-    console.log(foto)
-  }
-
-  delete(foto){
+  delete(foto: FotoComponent, painel: PainelComponent ){
     console.log(foto);
     this.service
       .delete(foto)
       .subscribe(() => {
-              let indice = this.fotos.indexOf(foto);
-              this.fotos.splice(indice, 1);
-              console.log('foto excluida com sucesso!!')}, 
-                  err => console.log(err))
+
+        painel.fadeOut(() => {
+          let novasFotos = this.fotos.slice(0);
+          let indice = this.fotos.indexOf(foto);
+          this.fotos.splice(indice, 1);
+          this.fotos = novasFotos;
+          console.log('foto excluida com sucesso!!')
+        });
+      }, 
+      err => console.log(err))
   }
 
 }
