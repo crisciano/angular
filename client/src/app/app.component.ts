@@ -1,4 +1,6 @@
-import { Component } from '@angular/core'
+import { Component, enableProdMode } from '@angular/core'
+
+enableProdMode();
 
 @Component({
 	moduleId: module.id,
@@ -8,5 +10,4 @@ import { Component } from '@angular/core'
 })
 export class AppComponent {
   title = 'app';
-
 }

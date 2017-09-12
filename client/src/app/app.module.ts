@@ -15,7 +15,8 @@ import { ListagemComponent } from './listagem/listagem.component';
 import { routing } from './app.routes';
 import { IndexComponent } from './index/index.component';
 import { ErrorComponent } from './error/error.component'
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component'
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
     CadastroComponent,
     ListagemComponent,
     IndexComponent,
-    ErrorComponent
+    ErrorComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -40,4 +42,5 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
   providers: [ FotoService ],
   bootstrap: [ AppComponent ]
 })
-export class AppModule { }
+export class AppModule { 
+}
