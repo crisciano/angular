@@ -22,6 +22,8 @@ export class CadastroComponent{
 		this.route = route;
 		this.router = router;
 
+		console.log(document.cookie)
+
 		this.route.params.subscribe( params => {
 			let id = params['id'];
 
@@ -32,7 +34,7 @@ export class CadastroComponent{
 					.subscribe( foto => this.foto = foto,
 								err => console.log(err) )
 			}
-			console.log(params)
+			// console.log(params)
 
 
 		})
