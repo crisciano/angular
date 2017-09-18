@@ -16,10 +16,6 @@ export class LoginComponent implements OnInit {
 	user: Object = { }
 	router: Router;
 
-	// @Input() password : string = '';
-	// @Input() email : string = '';
-
-
 	constructor(router: Router) {
 		this.router = router;
 	}
